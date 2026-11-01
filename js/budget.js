@@ -1,4 +1,4 @@
-export const money = n => `${n.toLocaleString('ko-KR')}\u00a0원`;
+export const money = n => `${n.toLocaleString('ko-KR')}원`;
 export function localDate(d = new Date()) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
 export const monthOf = date => date.slice(0,7);
 export function validDate(s) {
@@ -28,3 +28,6 @@ export function summary(state, month, today=localDate()) {
   const allocated=days*dailyBudget(state,month), balance=allocated-spend;
   return {days,spend,fixed,todaySpend,allocated,balance,past,overspend:past?Math.max(0,-balance):0,todayStart:balance+todaySpend};
 }
+
+// Legacy fixed records remain stored, but are not surfaced in the current UI.
+export function recentExpenses(state,today=localDate(),limit=8){return state.expenses.map((entry,index)=>({entry,index})).filter(({entry})=>!entry.fixed&&entry.date<=today).sort((a,b)=>b.entry.date.localeCompare(a.entry.date)||b.index-a.index).slice(0,limit).map(({entry})=>entry);}
