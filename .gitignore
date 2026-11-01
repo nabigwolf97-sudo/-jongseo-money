@@ -1,0 +1,19 @@
+# Publish only reviewed app files. Everything else stays local.
+*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/manifest.webmanifest
+!/sw.js
+!/css/
+!/css/styles.css
+!/js/
+!/js/app.js
+!/js/budget.js
+!/js/storage.js
+!/js/views.js
+!/js/encouragement.js
+!/icons/
+!/icons/icon.svg
+!/icons/icon-192.png
+!/icons/icon-512.png

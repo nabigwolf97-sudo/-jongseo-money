@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "돈 모으자, 종서야",
+  "short_name": "돈 모으자, 종서야",
+  "lang": "ko",
+  "description": "JONGSEO'S MONEY LAB · 종서만의 개인 예산 노트",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B1020",
+  "theme_color": "#0B1020",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
