@@ -1,4 +1,4 @@
-export const money = n => `${n.toLocaleString('ko-KR')}원`;
+export const money = n => `${n.toLocaleString('ko-KR')}\u00a0원`;
 export function localDate(d = new Date()) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
 export const monthOf = date => date.slice(0,7);
 export function validDate(s) {
