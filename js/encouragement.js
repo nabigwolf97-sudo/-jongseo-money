@@ -33,5 +33,5 @@ export const messages={
 export function encouragement(balance,todaySpend,daily,today=localDate()){
  const state=balance<0?'recover':balance===0?'empty':balance<daily*.25?'careful':todaySpend===0?'fresh':'steady';
  const [y,m,d]=today.split('-').map(Number);const day=Math.floor(Date.UTC(y,m-1,d)/86400000);const pool=messages[state];
- return `${pool[((day%pool.length)+pool.length)%pool.length]} 종서야.`;
+ return `종서야, ${pool[((day%pool.length)+pool.length)%pool.length]}`;
 }
